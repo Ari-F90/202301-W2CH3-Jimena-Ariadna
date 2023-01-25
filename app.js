@@ -26,7 +26,6 @@ export const aUnshift = (aData, b) => {
   } while (n > 0);
 
   aData[0] = b;
-  console.log(aData);
   return aLength(aData);
 };
 
@@ -44,4 +43,21 @@ export const aSome = (aData, b) => {
   }
 
   return false;
+};
+
+export const aEvery = (aData, b) => {
+
+  let z = 0;
+
+  for (const i of aData) {
+    if (aData[i] !== b) {
+      z++;
+    }
+  }
+
+  if (z > 0) {
+    return false;
+  }
+
+  return true;
 };

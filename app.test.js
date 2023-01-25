@@ -1,6 +1,4 @@
-
-import { aLength, aPush, aPop, aUnshift, aSome } from './app';
-
+import { aLength, aPush, aPop, aShift, aUnshift, aSome, aEvery } from './app';
 
 describe('Given this function', () => {
   test('Then  if the array is [1, 2, 3, 4, 5] the length should be 5', () => {
@@ -29,10 +27,24 @@ describe('Given this function', () => {
     expect(r).toBe(expected);
   });
 
-  test('Then  if the array is [1, 2, 3, 4, 5] some(elem => 5) should be true', () => {
+  test('Then  if the array is [1, 2, 3, 4, 5] the unshift should be 6', () => {
+    const aData = [1, 2, 3, 4, 5];
+    const r = aUnshift(aData, 'ejemplo');
+    const expected = 6;
+    expect(r).toBe(expected);
+  });
+
+  test('Then  if the array is [1, 2, 3, 4, 5] some(elem => 4) should be true', () => {
     const aData = [1, 2, 3, 4, 5];
     const r = aSome(aData, 4);
     const expected = true;
+    expect(r).toBe(expected);
+  });
+
+  test('Then  if the array is [1, 2, 3, 4, 5] every(elem => 5) should be false', () => {
+    const aData = [1, 2, 3, 4, 5];
+    const r = aEvery(aData, 5);
+    const expected = false;
     expect(r).toBe(expected);
   });
 });

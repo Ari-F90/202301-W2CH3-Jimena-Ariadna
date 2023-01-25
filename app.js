@@ -13,6 +13,11 @@ export const aPush = (aData, b) => {
   return z;
 };
 
+export const aPop = (aData) => {
+  const x = aData[aLength(aData) - 1];
+  return x;
+}
+
 export const aUnshift = (aData, b) => {
   let n = aLength(aData);
   do {

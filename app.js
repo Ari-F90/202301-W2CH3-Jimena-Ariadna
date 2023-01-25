@@ -30,6 +30,7 @@ export const aUnshift = (aData, b) => {
   return aLength(aData);
 };
 
+<<<<<<< feature/fifthfunction
 export const aShift = (aData) => {
   const x = aData[0];
   let n = 1;
@@ -40,4 +41,20 @@ export const aShift = (aData) => {
 
   aData.length -= 1;
   return x;
+=======
+export const aSome = (aData, b) => {
+  let y = 0;
+
+  for (const i of aData) {
+    if (aData[i] === b) {
+      y++;
+    }
+  }
+
+  if (y > 0) {
+    return true;
+  }
+
+  return false;
+>>>>>>> main
 };

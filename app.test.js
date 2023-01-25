@@ -1,6 +1,4 @@
-
-import { aLength, aPush, aPop, aUnshift, aSome } from './app';
-
+import { aLength, aPush, aPop, aShift, aSome } from './app';
 
 describe('Given this function', () => {
   test('Then  if the array is [1, 2, 3, 4, 5] the length should be 5', () => {

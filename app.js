@@ -3,9 +3,16 @@ export const aLength = (aData) => {
   while (aData[n] !== undefined) {
     n++;
   }
+
   return n;
 };
-export const aPush = (aData, b) => {
-  const z = aLength(aData) + 1;
-  return z;
+
+export const aPush = (aData, x) => {
+  aData[aLength(aData)] = x;
+  return aData;
+};
+
+export const aPop = (aData) => {
+  const x = aData[aLength(aData) - 1];
+  return x;
 };

@@ -15,8 +15,9 @@ export const aPush = (aData, b) => {
 
 export const aPop = (aData) => {
   const x = aData[aLength(aData) - 1];
+  aData.length = aLength(aData) - 1;
   return x;
-}
+};
 
 export const aUnshift = (aData, b) => {
   let n = aLength(aData);
@@ -26,6 +27,17 @@ export const aUnshift = (aData, b) => {
   } while (n > 0);
 
   aData[0] = b;
-  console.log(aData);
   return aLength(aData);
+};
+
+export const aShift = (aData) => {
+  const x = aData[0];
+  let n = 1;
+  do {
+    aData[n - 1] = aData[n];
+    n++;
+  } while (n < aLength(aData));
+
+  aData.length -= 1;
+  return x;
 };

@@ -1,4 +1,6 @@
+
 import { aLength, aPush, aPop, aUnshift, aSome } from './app';
+
 
 describe('Given this function', () => {
   test('Then  if the array is [1, 2, 3, 4, 5] the length should be 5', () => {
@@ -20,11 +22,10 @@ describe('Given this function', () => {
     const expected = 23;
     expect(r).toBe(expected);
   });
-
-  test('Then  if the array is [1, 2, 3, 4, 5] the unshift should be 6', () => {
-    const aData = [1, 2, 3, 4, 5];
-    const r = aUnshift(aData, 'ejemplo');
-    const expected = 6;
+  test('Then  if the array is [34, 26, 3, 4, 23] the shift function should be 34', () => {
+    const aData = [34, 26, 3, 4, 23];
+    const r = aShift(aData);
+    const expected = 34;
     expect(r).toBe(expected);
   });
 

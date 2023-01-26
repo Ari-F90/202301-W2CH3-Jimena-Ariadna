@@ -73,3 +73,7 @@ export const aEvery = (aData, b) => {
 
   return true;
 };
+
+
+const x = 0;
+

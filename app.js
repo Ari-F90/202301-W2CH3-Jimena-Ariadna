@@ -40,7 +40,7 @@ export const aShift = (aData) => {
 
   aData.length -= 1;
   return x;
-}
+};
 
 export const aSome = (aData, b) => {
   let y = 0;
@@ -56,11 +56,9 @@ export const aSome = (aData, b) => {
   }
 
   return false;
-
 };
 
 export const aEvery = (aData, b) => {
-
   let z = 0;
 
   for (const i of aData) {

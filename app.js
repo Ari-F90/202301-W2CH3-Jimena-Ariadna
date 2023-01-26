@@ -57,11 +57,11 @@ export const aSome = (aData, b) => {
 
   return false;
 };
+// const aData = [5, 5, 5, 5, 5];
 
 export const aEvery = (aData, b) => {
   let z = 0;
-
-  for (const i of aData) {
+  for (let i = 0; i < aLength(aData); i++) {
     if (aData[i] !== b) {
       z++;
     }
@@ -74,6 +74,4 @@ export const aEvery = (aData, b) => {
   return true;
 };
 
-
-const x = 0;
-
+// console.log(aEvery(aData,5))

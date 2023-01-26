@@ -73,3 +73,19 @@ export const aEvery = (aData, b) => {
 
   return true;
 };
+
+export const aFind = (aData, b) => {
+  for (let i = 0; i < aLength(aData); i++) {
+    if (aData[i] === b) {
+      return aData[i];
+    }
+  }
+};
+
+export const aFindIndex = (aData, b) => {
+  for (let i = 0; i < aLength(aData); i++) {
+    if (aData[i] === b) {
+      return i;
+    }
+  }
+};

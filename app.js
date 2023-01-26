@@ -88,4 +88,6 @@ export const aFindIndex = (aData, b) => {
       return i;
     }
   }
+
+  return -1;
 };

@@ -6,6 +6,8 @@ import {
   aUnshift,
   aSome,
   aEvery,
+  aFilter,
+  aMap,
   aFind,
   aFindIndex,
 } from './app';
@@ -114,5 +116,50 @@ describe('Given this function', () => {
       const expected = -1;
       expect(r).toBe(expected);
     });
+  });
+});
+describe('Given the array [1, 2, 3, 4, 5] when using Filter', () => {
+  test('Then  if the array is [1, 2, 3, 4, 5] filter(elem => > 3) should give a new array', () => {
+    const aData = [1, 2, 3, 4, 5];
+
+    function condition(a) {
+      if (a > 3) {
+        return true;
+      }
+    }
+
+    const r = aFilter(aData, condition);
+    const expected = [4, 5];
+    expect(r).toEqual(expected);
+  });
+});
+
+describe('Given the array [1, 2, 3, 4, 5] when using Map', () => {
+  test('Then  if the function is (elem => elem * 2) it should return [2, 4, 6, 8, 10]', () => {
+    const aData = [1, 2, 3, 4, 5];
+    const r = aMap(aData, '*', 2);
+    const expected = [2, 4, 6, 8, 10];
+    expect(r).toEqual(expected);
+  });
+
+  test('Then  if the function is (elem => elem / 2) it should return [0.5, 1, 1.5, 2, 2.5]', () => {
+    const aData = [1, 2, 3, 4, 5];
+    const r = aMap(aData, '/', 2);
+    const expected = [0.5, 1, 1.5, 2, 2.5];
+    expect(r).toEqual(expected);
+  });
+
+  test('Then  if the function is (elem => elem + 2) it should return [3, 4, 5, 6, 7]', () => {
+    const aData = [1, 2, 3, 4, 5];
+    const r = aMap(aData, '+', 2);
+    const expected = [3, 4, 5, 6, 7];
+    expect(r).toEqual(expected);
+  });
+
+  test('Then  if the function is (elem => elem - 2) it should return [-1, 0, 1, 2, 3]', () => {
+    const aData = [1, 2, 3, 4, 5];
+    const r = aMap(aData, '-', 2);
+    const expected = [-1, 0, 1, 2, 3];
+    expect(r).toEqual(expected);
   });
 });

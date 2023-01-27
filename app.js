@@ -73,6 +73,24 @@ export const aEvery = (aData, b) => {
   return true;
 };
 
+export const aFind = (aData, b) => {
+  for (let i = 0; i < aLength(aData); i++) {
+    if (aData[i] === b) {
+      return aData[i];
+    }
+  }
+};
+
+export const aFindIndex = (aData, b) => {
+  for (let i = 0; i < aLength(aData); i++) {
+    if (aData[i] === b) {
+      return i;
+    }
+  }
+
+  return -1;
+};
+
 export const aFilter = (aData, condition) => {
   const newArr = [];
   for (let i = 0; i < aLength(aData); i++) {
@@ -88,20 +106,21 @@ export const aMap = (aData, x, num) => {
   let newArr = [];
   for (let i = 0; i < aLength(aData); i++) {
     switch (x) {
-      case x = '*':
+      case (x = '*'):
         aPush(newArr, aData[i] * num);
         break;
-      case x = '/':
+      case (x = '/'):
         aPush(newArr, aData[i] / num);
         break;
-      case x = '+':
+      case (x = '+'):
         aPush(newArr, aData[i] + num);
         break;
-      case x = '-':
+      case (x = '-'):
         aPush(newArr, aData[i] - num);
         break;
 
-      default: newArr = 'Error';
+      default:
+        newArr = 'Error';
         break;
     }
   }

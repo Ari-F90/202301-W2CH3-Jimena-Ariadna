@@ -149,7 +149,7 @@ describe('Given the array [1, 2, 3, 4, 5] when using Map', () => {
     expect(r).toEqual(expected);
   });
 
-<<<<<<< HEAD
+
   test('Then  if the function is (elem => elem + 2) it should return [3, 4, 5, 6, 7]', () => {
     const aData = [1, 2, 3, 4, 5];
     const r = aMap(aData, '+', 2);
@@ -162,7 +162,6 @@ describe('Given the array [1, 2, 3, 4, 5] when using Map', () => {
     const r = aMap(aData, '-', 2);
     const expected = [-1, 0, 1, 2, 3];
     expect(r).toEqual(expected);
-=======
 
   test('Then  if the array is [1, 2, 3, 4, 5, 6] find (elem => 6) should be 6', () => {
     const aData = [1, 2, 3, 4, 5, 6];
@@ -181,6 +180,5 @@ describe('Given the array [1, 2, 3, 4, 5] when using Map', () => {
     const expected = true;
 
     expect(r).toBe(expected);
->>>>>>> 32c95ba2dc61502efaefc1040cc90c9dc7512c9a
   });
 });
